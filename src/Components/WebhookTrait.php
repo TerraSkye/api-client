@@ -4,7 +4,7 @@ namespace Afosto\ApiClient\Components;
 
 
 use Afosto\ApiClient\Components\Exceptions\WebhookException;
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 
 trait WebhookTrait {
 

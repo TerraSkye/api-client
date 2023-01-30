@@ -7,7 +7,7 @@ use Afosto\ApiClient\Components\Exceptions\ModelException;
 use Afosto\ApiClient\Components\Helpers\ApiHelper;
 use Afosto\ApiClient\Models\Products\Product;
 use Afosto\ApiClient\Components\Models\Count;
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 /**
  * @property Api $api
  * @property boolean $hasErrors

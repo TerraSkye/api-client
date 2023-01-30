@@ -4,7 +4,7 @@ namespace Afosto\ApiClient\Components\Models;
 
 use Afosto\ApiClient\Components\Component;
 use Afosto\ApiClient\Components\Helpers\ApiHelper;
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 
 class Relation extends Component {
 

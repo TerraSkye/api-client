@@ -2,7 +2,7 @@
 
 namespace Afosto\ApiClient\Generator;
 
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 
 class Definition {
 

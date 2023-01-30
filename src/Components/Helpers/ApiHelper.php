@@ -3,7 +3,7 @@
 namespace Afosto\ApiClient\Components\Helpers;
 
 
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 
 class ApiHelper {
 
