@@ -160,7 +160,7 @@ class Generator extends Command {
         $this->_paths = [];
         foreach ($this->_swaggerSource['paths'] as $path => $pathData) {
             $path = current(explode('/', substr($path, 1)));
-            $this->_paths[] = \Doctrine\Inflector\Inflector::singularize($path);
+            $this->_paths[] = \Doctrine\Inflector\(\Doctrine\Inflector\InflectorFactory::create()->build())->singularize($path);
         }
         $this->_paths = array_unique($this->_paths);
     }

@@ -32,7 +32,7 @@ trait WebhookTrait {
      */
     public function getWebhookUrl($action) {
         $params = [
-            'model' => Inflector::tableize($this->getName()),
+            'model' => (\Doctrine\Inflector\InflectorFactory::create()->build())->tableize($this->getName()),
             'action' => $action,
         ];
         if (defined('WEBHOOK_KEY')) {

@@ -143,7 +143,7 @@ class Definition {
      * @return string
      */
     private function _getNameSpace($name) {
-        return Inflector::pluralize(current(explode('_', $name)));
+        return (\Doctrine\Inflector\InflectorFactory::create()->build())->pluralize(current(explode('_', $name)));
     }
     
     /**

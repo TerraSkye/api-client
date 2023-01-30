@@ -119,7 +119,7 @@ trait ModelTrait {
      * @return string
      */
     public function getRoute() {
-        return strtolower(Inflector::pluralize($this->getName()));
+        return strtolower((\Doctrine\Inflector\InflectorFactory::create()->build())->pluralize($this->getName()));
     }
 
     /**

@@ -34,9 +34,9 @@ class Relation extends Component {
     public function __construct(Model $source, $attribute) {
         list($this->model, $this->type) = $source->getRelations()[$attribute];
         if ($this->isRel()) {
-            $this->classPath = 'Afosto\ApiClient\Models\\' . Inflector::pluralize($this->_getModelForRel()) . '\\' . $this->model;
+            $this->classPath = 'Afosto\ApiClient\Models\\' . (\Doctrine\Inflector\InflectorFactory::create()->build())->pluralize($this->_getModelForRel()) . '\\' . $this->model;
         } else if ($this->isReference()) {
-            $this->classPath = 'Afosto\ApiClient\Models\\' . Inflector::pluralize($this->_getModelForReference()) . '\\' . $this->_getModelForReference();
+            $this->classPath = 'Afosto\ApiClient\Models\\' . (\Doctrine\Inflector\InflectorFactory::create()->build())->pluralize($this->_getModelForReference()) . '\\' . $this->_getModelForReference();
         } else {
             $this->classPath = $source->getNameSpace() . '\\' . $this->model;
         }

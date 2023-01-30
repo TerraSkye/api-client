@@ -125,8 +125,8 @@ class ApiHelper {
      * @return string
      */
     public static function getModelPath($name) {
-        $model = Inflector::classify($name);
-        return "Afosto\ApiClient\Models\\" . Inflector::pluralize($model) . "\\" . $model;
+        $model = (\Doctrine\Inflector\InflectorFactory::create()->build())->classify($name);
+        return "Afosto\ApiClient\Models\\" . (\Doctrine\Inflector\InflectorFactory::create()->build())->pluralize($model) . "\\" . $model;
     }
 
     /**
