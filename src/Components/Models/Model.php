@@ -52,7 +52,7 @@ abstract class Model extends Component implements JsonSerializable {
 
     /**
      * PHP getter magic method
-     * @param string $name 
+     * @param string $name
      * @return mixed
      */
     public function __get($name) {
@@ -135,7 +135,7 @@ abstract class Model extends Component implements JsonSerializable {
      * @throws ModelException
      */
     public function setAttributes($attributes) {
-        if (method_exists($attributes, 'getBody')) {
+        if (!is_array($attributes) && method_exists($attributes, 'getBody')) {
             $attributes = $attributes->getBody();
         }
 
